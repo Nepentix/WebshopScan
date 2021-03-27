@@ -1,8 +1,10 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+
 /*
 	Based on Eventually by HTML5 UP
 */
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -562,7 +564,7 @@ label {
 
 input[type="text"],
 input[type="password"],
-input[type="email"],
+input[type="url"],
 select,
 textarea {
   -moz-appearance: none;
@@ -589,13 +591,13 @@ textarea {
   width: 100%; }
   input[type="text"]:invalid,
   input[type="password"]:invalid,
-  input[type="email"]:invalid,
+  input[type="url"]:invalid,
   select:invalid,
   textarea:invalid {
     box-shadow: none; }
   input[type="text"]:focus,
   input[type="password"]:focus,
-  input[type="email"]:focus,
+  input[type="url"]:focus,
   select:focus,
   textarea:focus {
     -moz-animation: focus 0.1s;
@@ -623,7 +625,7 @@ select {
 
 input[type="text"],
 input[type="password"],
-input[type="email"],
+input[type="url"],
 select {
   height: 2.75em; }
 
@@ -805,7 +807,7 @@ button,
   position: relative; }
   #signup-form input[type="text"],
   #signup-form input[type="password"],
-  #signup-form input[type="email"] {
+  #signup-form input[type="url"] {
     width: 18em; }
   #signup-form > * {
     margin: 0 0 0 1em; }
@@ -819,7 +821,7 @@ button,
       flex-direction: column; }
       #signup-form input[type="type"],
       #signup-form input[type="password"],
-      #signup-form input[type="email"] {
+      #signup-form input[type="url"] {
         width: 100%; }
       #signup-form > * {
         margin: 1.25em 0 0 0; }
