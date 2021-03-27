@@ -1,10 +1,9 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 
-/*
-	Based on Eventually by HTML5 UP
-*/
+/* Based on Eventually by HTML5 UP */
 
+/* Basics */
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -23,32 +22,9 @@ section, summary, time, mark, audio, video {
   font: inherit;
   vertical-align: baseline; }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-  blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-body {
-  -webkit-text-size-adjust: none; }
-
-mark {
-  background-color: transparent;
-  color: inherit; }
+@media screen and (max-width: 480px) {
+  html, body {
+    min-width: 320px; } }
 
 input::-moz-focus-inner {
   border: 0;
@@ -59,17 +35,6 @@ input, select, textarea {
   -webkit-appearance: none;
   -ms-appearance: none;
   appearance: none; }
-
-/* Basic */
-@-ms-viewport {
-  width: device-width; }
-
-body {
-  -ms-overflow-style: scrollbar; }
-
-@media screen and (max-width: 480px) {
-  html, body {
-    min-width: 320px; } }
 
 html {
   box-sizing: border-box; }
@@ -101,15 +66,6 @@ body {
   justify-content: center;
   background-color: #000;
   padding: 6em 4em 4em 4em; }
-  body.is-preload *, body.is-preload *:before, body.is-preload *:after {
-    -moz-animation: none !important;
-    -webkit-animation: none !important;
-    -ms-animation: none !important;
-    animation: none !important;
-    -moz-transition: none !important;
-    -webkit-transition: none !important;
-    -ms-transition: none !important;
-    transition: none !important; }
   body > * {
     position: relative;
     z-index: 2; }
@@ -123,7 +79,7 @@ body {
     body {
       padding: 5em 1.25em 1.25em 1.25em; } }
 
-/* BG */
+/* Background */
 #bg {
   -moz-transition: opacity 2s ease-in-out;
   -webkit-transition: opacity 2s ease-in-out;
@@ -179,55 +135,7 @@ body {
   body.is-preload #bg {
     opacity: 0; }
 
-@-moz-keyframes bg {
-  0% {
-    -moz-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0); }
-  100% {
-    -moz-transform: translateX(-25%);
-    -webkit-transform: translateX(-25%);
-    -ms-transform: translateX(-25%);
-    transform: translateX(-25%); } }
-
-@-webkit-keyframes bg {
-  0% {
-    -moz-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0); }
-  100% {
-    -moz-transform: translateX(-25%);
-    -webkit-transform: translateX(-25%);
-    -ms-transform: translateX(-25%);
-    transform: translateX(-25%); } }
-
-@-ms-keyframes bg {
-  0% {
-    -moz-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0); }
-  100% {
-    -moz-transform: translateX(-25%);
-    -webkit-transform: translateX(-25%);
-    -ms-transform: translateX(-25%);
-    transform: translateX(-25%); } }
-
-@keyframes bg {
-  0% {
-    -moz-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0); }
-  100% {
-    -moz-transform: translateX(-25%);
-    -webkit-transform: translateX(-25%);
-    -ms-transform: translateX(-25%);
-    transform: translateX(-25%); } }
-
-/* Type */
+/* Input Types */
 body, input, select, textarea {
   color: rgba(255, 255, 255, 0.75);
   font-family: "Roboto", sans-serif;
@@ -251,11 +159,8 @@ body, input, select, textarea {
     body, input, select, textarea {
       font-size: 12pt; } }
 
+/* Texts */
 a {
-  -moz-transition: border-bottom-color 0.2s ease, color 0.2s ease;
-  -webkit-transition: border-bottom-color 0.2s ease, color 0.2s ease;
-  -ms-transition: border-bottom-color 0.2s ease, color 0.2s ease;
-  transition: border-bottom-color 0.2s ease, color 0.2s ease;
   border-bottom: dotted 1px rgba(255, 255, 255, 0.25);
   color: #1cb495;
   text-decoration: none; }
@@ -306,49 +211,6 @@ h5 {
 h6 {
   font-size: 0.7em;
   line-height: 1.5em; }
-
-sub {
-  font-size: 0.8em;
-  position: relative;
-  top: 0.5em; }
-
-sup {
-  font-size: 0.8em;
-  position: relative;
-  top: -0.5em; }
-
-blockquote {
-  border-left: solid 8px rgba(255, 255, 255, 0.35);
-  font-style: italic;
-  margin: 0 0 2em 0;
-  padding: 0.5em 0 0.5em 2em; }
-
-code {
-  background: rgba(255, 255, 255, 0.125);
-  border-radius: 6px;
-  border: solid 2px rgba(255, 255, 255, 0.35);
-  font-family: "Courier New", monospace;
-  font-size: 0.9em;
-  margin: 0 0.25em;
-  padding: 0.25em 0.65em; }
-
-pre {
-  -webkit-overflow-scrolling: touch;
-  font-family: "Courier New", monospace;
-  font-size: 0.9em;
-  margin: 0 0 2em 0; }
-  pre code {
-    display: block;
-    line-height: 1.75em;
-    padding: 1em 1.5em;
-    overflow-x: auto; }
-
-hr {
-  border: 0;
-  border-bottom: solid 2px rgba(255, 255, 255, 0.35);
-  margin: 2em 0; }
-  hr.major {
-    margin: 3em 0; }
 
 /* Section/Article */
 section.special, article.special {
@@ -494,76 +356,7 @@ label {
   font-weight: 700;
   margin: 0 0 1em 0; }
 
-@-moz-keyframes focus {
-  0% {
-    -moz-transform: scale(1);
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); }
-  50% {
-    -moz-transform: scale(1.025);
-    -webkit-transform: scale(1.025);
-    -ms-transform: scale(1.025);
-    transform: scale(1.025); }
-  100% {
-    -moz-transform: scale(1);
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); } }
-
-@-webkit-keyframes focus {
-  0% {
-    -moz-transform: scale(1);
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); }
-  50% {
-    -moz-transform: scale(1.025);
-    -webkit-transform: scale(1.025);
-    -ms-transform: scale(1.025);
-    transform: scale(1.025); }
-  100% {
-    -moz-transform: scale(1);
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); } }
-
-@-ms-keyframes focus {
-  0% {
-    -moz-transform: scale(1);
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); }
-  50% {
-    -moz-transform: scale(1.025);
-    -webkit-transform: scale(1.025);
-    -ms-transform: scale(1.025);
-    transform: scale(1.025); }
-  100% {
-    -moz-transform: scale(1);
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); } }
-
-@keyframes focus {
-  0% {
-    -moz-transform: scale(1);
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); }
-  50% {
-    -moz-transform: scale(1.025);
-    -webkit-transform: scale(1.025);
-    -ms-transform: scale(1.025);
-    transform: scale(1.025); }
-  100% {
-    -moz-transform: scale(1);
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); } }
-
 input[type="text"],
-input[type="password"],
 input[type="url"],
 select,
 textarea {
@@ -589,14 +382,13 @@ textarea {
   padding: 0 1em;
   text-decoration: none;
   width: 100%; }
+  
   input[type="text"]:invalid,
-  input[type="password"]:invalid,
   input[type="url"]:invalid,
   select:invalid,
   textarea:invalid {
     box-shadow: none; }
   input[type="text"]:focus,
-  input[type="password"]:focus,
   input[type="url"]:focus,
   select:focus,
   textarea:focus {
@@ -624,7 +416,6 @@ select {
     display: none; }
 
 input[type="text"],
-input[type="password"],
 input[type="url"],
 select {
   height: 2.75em; }
@@ -798,34 +589,32 @@ button,
   #header {
     margin: 0 0 1em 0; } }
 
-/* Signup Form */
-#signup-form {
+/* Checking Form */
+#check-form {
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   position: relative; }
-  #signup-form input[type="text"],
-  #signup-form input[type="password"],
-  #signup-form input[type="url"] {
+  #check-form input[type="text"],
+  #check-form input[type="url"] {
     width: 18em; }
-  #signup-form > * {
+  #check-form > * {
     margin: 0 0 0 1em; }
-  #signup-form > :first-child {
+  #check-form > :first-child {
     margin: 0 0 0 0; }
   @media screen and (max-width: 480px) {
-    #signup-form {
+    #check-form {
       -moz-flex-direction: column;
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column; }
-      #signup-form input[type="type"],
-      #signup-form input[type="password"],
-      #signup-form input[type="url"] {
+      #check-form input[type="type"],
+      #check-form input[type="url"] {
         width: 100%; }
-      #signup-form > * {
+      #check-form > * {
         margin: 1.25em 0 0 0; }
-      #signup-form .message {
+      #check-form .message {
         bottom: -1.5em;
         font-size: 0.9em;
         height: 1em;
