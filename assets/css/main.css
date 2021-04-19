@@ -1,10 +1,10 @@
 /* Based on Eventually by HTML5 UP */
 
-/* Basics */
-
+/* IMPORT */
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 
+/* MAIN */
 *, *:before, *:after {
   box-sizing: inherit; }
 
@@ -83,7 +83,7 @@ body, input, select, textarea {
     body, input, select, textarea {
       font-size: 12pt; } }
 
-/* Texts */
+/* TEXT */
 a {
   border-bottom: dotted 1px rgba(255, 255, 255, 0.25);
   color: #1cb495;
@@ -122,7 +122,16 @@ h4 {
   font-size: 1.1em;
   line-height: 1.5em; }
 
-/* Header */
+/* HEADER */
+#header {
+  padding-bottom: 20px;
+  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -110%);
+}
+
 #header h1 {
   font-size: 3.25em;
   margin: auto;
@@ -168,7 +177,7 @@ header h4 + p {
   #header {
     margin: 0 0 1em 0; } }
 
-/* Icon */
+/* ICON */
 .icon {
   text-decoration: none;
   border-bottom: none;
@@ -207,7 +216,7 @@ ul.icons {
     ul.icons li a {
       color: inherit; }
 
-/* Form */
+/* CHECK FORM */
 form {
   margin: 0 0 2em 0; }
   form .message {
@@ -274,9 +283,7 @@ textarea {
   -webkit-transition: border-color 0.2s ease, background-color 0.2s ease;
   -ms-transition: border-color 0.2s ease, background-color 0.2s ease;
   transition: border-color 0.2s ease, background-color 0.2s ease;
-  background-color: blue;
-  border-radius: 6px;
-  border: none;
+  background-color: white;
   border: solid 2px rgba(0, 0, 0, 0.35);
   color: inherit;
   display: block;
@@ -363,7 +370,6 @@ input[type="radio"] {
     input[type="checkbox"] + label:before,
     input[type="radio"] + label:before {
       background: rgba(255, 255, 255, 0.125);
-      border-radius: 6px;
       border: solid 2px rgba(255, 255, 255, 0.35);
       content: '';
       display: inline-block;
@@ -386,38 +392,49 @@ input[type="radio"] {
     border-color: #1cb495;
     box-shadow: 0 0 0 2px #1cb495; }
 
-input[type="checkbox"] + label:before {
-  border-radius: 6px; }
+#check-form {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin: auto; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-input[type="radio"] + label:before {
-  border-radius: 100%; }
+  #check-form input[type="text"],
+  #check-form input[type="url"] {
+    width: 18em; }
+  @media screen and (max-width: 480px) {
+    #check-form {
+      -moz-flex-direction: column;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      #check-form input[type="type"],
+      #check-form input[type="url"] {
+        width: 100%; }
+      #check-form > * {
+        margin: 1.25em 0 0 0; }
+      #check-form .message {
+        bottom: -1.5em;
+        font-size: 0.9em;
+        height: 1em;
+        left: 0;
+        line-height: inherit;
+        margin-top: 0;
+        position: absolute; } }
 
-::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.5) !important;
-  opacity: 1.0; }
 
-:-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5) !important;
-  opacity: 1.0; }
-
-::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5) !important;
-  opacity: 1.0; }
-
-:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5) !important;
-  opacity: 1.0; }
-
-.formerize-placeholder {
-  color: rgba(255, 255, 255, 0.5) !important;
-  opacity: 1.0; }
-
-/* Button */
+/* BUTTON */
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button,
 .button {
+  margin-left: -2px;
   -moz-appearance: none;
   -webkit-appearance: none;
   -ms-appearance: none;
@@ -427,7 +444,6 @@ button,
   -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
   background-color: #1cb495;
-  border-radius: 6px;
   border: 0;
   color: #ffffff !important;
   cursor: pointer;
@@ -469,43 +485,7 @@ button,
     .button {
       padding: 0; } }
 
-/* Checking Form */
-#check-form {
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  position: relative;
-  margin: auto; }
-
-  #check-form input[type="text"],
-  #check-form input[type="url"] {
-    width: 18em; }
-  #check-form > * {
-    margin: 0 0 0 1em; }
-  #check-form > :first-child {
-    margin: 0 0 0 0; }
-  @media screen and (max-width: 480px) {
-    #check-form {
-      -moz-flex-direction: column;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column; }
-      #check-form input[type="type"],
-      #check-form input[type="url"] {
-        width: 100%; }
-      #check-form > * {
-        margin: 1.25em 0 0 0; }
-      #check-form .message {
-        bottom: -1.5em;
-        font-size: 0.9em;
-        height: 1em;
-        left: 0;
-        line-height: inherit;
-        margin-top: 0;
-        position: absolute; } }
-
-/* Footer */
+/* FOOTER */
 #footer {
   -moz-transition: opacity 0.5s ease-in-out;
   -webkit-transition: opacity 0.5s ease-in-out;
