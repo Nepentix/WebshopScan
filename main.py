@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "Congratulations, it's a web app!"
+    return render_template("index.html")
 
 ## This will run the file locally when executed directly.
 if __name__ == "__main__":
